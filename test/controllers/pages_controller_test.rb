@@ -1,7 +1,19 @@
 require 'test_helper'
 
 class PagesControllerTest < ActionDispatch::IntegrationTest
-  # test "the truth" do
-  #   assert true
-  # end
+  test "should get index" do
+    get pages_index_url
+    assert_response :success
+  end
+
+  test "should get test" do
+    get pages_test_url
+    assert_response :success
+  end
+
+  test "should get about_us" do
+    get pages_about_us_url
+    assert_response :success
+  end
+
 end
